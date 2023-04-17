@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio - Countdown</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  // Set the date we're counting down to
+  let countDownDate = new Date("2023-04-16T23:37:00").getTime();
+  
+  // Update the count down every 1 second
+  let x = setInterval(function() {
+  
+    // Get today's date and time
+    let now = new Date().getTime();
+  
+    // Find the distance between now and the count down date
+    let distance = countDownDate - now;
+  
+    // Time calculations for days, hours, minutes and seconds
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    // Display the result in the element with id="demo"
+    
+    document.getElementById('days').innerHTML = days
+    document.getElementById('hours').innerHTML = hours
+    document.getElementById('minutes').innerHTML = minutes
+    document.getElementById('seconds').innerHTML = seconds
+    // If the count down is finished, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "Prepare-se para embarcar!";
+    }
+  }, 1000);
+  </script>
+    <div class="header">
+      <img src="./assets/img/top-image.svg" alt="">
+    </div>
+    <div id="container">
+      <div id="section">
+        <h1>Ready to launch in...</h1>
+        <div id="countdown">
+          <div>
+            <p>Dias</p>
+            <span id="days"></span>
+          </div>
+          <span>:</span>
+          <div>
+            <p>Horas</p>
+            <span id="hours"></span>
+          </div>
+          <span>:</span>
+          <div>
+            <p>Minutos</p>
+            <span id="minutes"></span>
+          </div>
+          <span>:</span>
+          <div>
+            <p>Segundos</p>
+            <span id="seconds"></span>
+          </div>
+        </div>
+        <p>Inscreva-se para saber mais sobre o lançamento</p>
+
+        <button>Inscreva-se</button>
+      </div>
+      <div>
+        <img src="./assets/img/rocket.svg" alt="">
+      </div>
+    </div>
+    <div class="footer">
+      <img src="./assets/img/bottom-image.svg" alt="">
+    </div>
+</body>
+
+</html>
