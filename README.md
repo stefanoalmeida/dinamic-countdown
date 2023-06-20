@@ -1,9 +1,13 @@
-# Página HTML com countdown dinâmico
+<p align="center">
+  <img src=".assets/img/cover.png" alt="Demonstração do projeto" width="100%" />
+</p>
 
-<p>Desafio fornecido na Trilha Discover da Rocketseat</p>
+##  💻 Projeto
 
-## Tecnologias utilizadas 💻
+Página com countdown dinâmico desenvolvido na trilha Discover da Rocketseat
 
-* HTML
-* CSS
-* JS
+## 🚀 Tecnologias
+
+- HTML
+- CSS
+- JS
